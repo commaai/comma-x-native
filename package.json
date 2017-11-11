@@ -1,0 +1,24 @@
+{
+  "name": "comma-x-native",
+  "version": "0.1.0",
+  "description": "X UI Toolkit for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commaai/comma-x-native.git"
+  },
+  "author": "comma.ai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/commaai/comma-x-native/issues"
+  },
+  "homepage": "https://github.com/commaai/comma-x-native#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "react": "^16.1.0",
+    "react-native": "^0.50.3"
+  }
+}
