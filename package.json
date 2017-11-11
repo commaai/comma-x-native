@@ -17,9 +17,6 @@
   },
   "homepage": "https://github.com/commaai/comma-x-native#readme",
   "dependencies": {
-    "lodash": "^4.17.4",
-    "react": "16.0.0-beta.5",
-    "react-native": "^0.49.5",
     "react-native-linear-gradient": "^2.3.0"
   }
 }
