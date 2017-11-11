@@ -19,6 +19,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "react": "^16.1.0",
-    "react-native": "^0.50.3"
+    "react-native": "^0.50.3",
+    "react-native-linear-gradient": "^2.3.0"
   }
 }
