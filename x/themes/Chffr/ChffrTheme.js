@@ -25,7 +25,7 @@ export const ChffrTheme = {
     },
     button: {
         defaults: {
-            borderWidth: 2,
+            borderWidth: 1,
             radius: 100,
             padding: '15%',
         },
@@ -53,7 +53,7 @@ export const ChffrTheme = {
             },
             inverted: {
                 background: Colors.transparent,
-                border: Colors.white,
+                border: Colors.white30,
             },
             blue: {
                 background: Colors.blue50,
