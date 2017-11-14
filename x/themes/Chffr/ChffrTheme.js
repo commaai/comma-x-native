@@ -25,7 +25,7 @@ export const ChffrTheme = {
     },
     button: {
         defaults: {
-            borderWidth: 1,
+            borderWidth: 2,
             radius: 100,
             padding: '15%',
         },
@@ -40,32 +40,33 @@ export const ChffrTheme = {
         },
         colors: {
             default: {
-                background: Colors.lightGrey500,
-                border: Colors.lightGrey400,
+                backgroundColor: Colors.lightGrey500,
+                borderColor: Colors.lightGrey400,
             },
             primary: {
-                background: Colors.blue50,
-                border: Colors.blue100,
+                backgroundColor: Colors.blue50,
+                borderColor: Colors.blue100,
             },
             transparent: {
-                background: Colors.transparent,
-                border: Colors.lightGrey500,
+                backgroundColor: Colors.transparent,
+                borderColor: Colors.lightGrey500,
             },
             inverted: {
-                background: Colors.transparent,
-                border: Colors.white30,
+                backgroundColor: Colors.transparent,
+                borderColor: Colors.white30,
+                borderWidth: 1,
             },
             blue: {
-                background: Colors.blue50,
-                border: Colors.blue100,
+                backgroundColor: Colors.blue50,
+                borderColor: Colors.blue100,
             },
             red: {
-                background: Colors.red100,
-                border: Colors.red200,
+                backgroundColor: Colors.red100,
+                borderColor: Colors.red200,
             },
             green: {
-                background: Colors.green100,
-                border: Colors.green200,
+                backgroundColor: Colors.green100,
+                borderColor: Colors.green200,
             },
         },
     }
