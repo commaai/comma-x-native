@@ -11,13 +11,15 @@
 
 */
 
+import _ from 'lodash';
 import BaseTheme from './x/themes/Base';
 import Button from './x/components/Button';
 import Gradient from './x/components/Gradient';
 import Image from './x/components/Image';
 import Text from './x/components/Text';
 
-export default function X(theme=BaseTheme) {
+export default function X(THEME) {
+    const theme = _.merge(BaseTheme, THEME);
     return {
         Button: Button(theme),
         Text: Text(theme),
