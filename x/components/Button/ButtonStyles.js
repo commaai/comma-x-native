@@ -28,10 +28,7 @@ export default (theme) => {
 
     // Assign Button Colors
     Object.keys(theme.button.colors).map((color) => {
-        ButtonStyles[`${ color }ColorButton`] = {};
-        Object.keys(theme.button.colors[color]).map((key) => {
-            ButtonStyles[`${ color }ColorButton`][key] = theme.button.colors[color][key];
-        })
+        ButtonStyles[`${ color }ColorButton`] = { ...theme.button.colors[color] };
     })
 
     return StyleSheet.create(ButtonStyles);
