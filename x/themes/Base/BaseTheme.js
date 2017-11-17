@@ -1,6 +1,6 @@
-import { Colors } from '../Colors';
+import { Colors } from './BaseColors';
 
-export const ChffrTheme = {
+export const BaseTheme = {
     text: {
         sizes: {
             tiny: 12,
@@ -11,10 +11,10 @@ export const ChffrTheme = {
             jumbo: 26,
         },
         weights: {
-            light: 'OpenSans-Light',
-            regular: 'OpenSans-Regular',
-            semibold: 'OpenSans-Semibold',
-            bold: 'OpenSans-Bold',
+            light: null,
+            regular: null,
+            semibold: null,
+            bold: null,
         },
         colors: {
             default: Colors.blue800,

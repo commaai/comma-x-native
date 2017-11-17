@@ -18,5 +18,8 @@
   "homepage": "https://github.com/commaai/comma-x-native#readme",
   "dependencies": {
     "react-native-linear-gradient": "^2.3.0"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.4"
   }
 }

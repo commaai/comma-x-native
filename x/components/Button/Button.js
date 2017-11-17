@@ -5,74 +5,76 @@ import {
     TouchableOpacity,
     ActivityIndicator,
 } from 'react-native';
-import XText from '../Text';
-import Styles from './ButtonStyles';
+import XNText from '../Text';
+import ButtonStyles from './ButtonStyles';
 
-class XButton extends Component {
+export default (theme) => {
+  const XText = XNText(theme);
+  let Styles = ButtonStyles(theme);
 
-    renderLoadingIndicator() {
-        return (
-            <View style={ Styles.loadingStateButtonIndicator }>
-                <ActivityIndicator
-                    color='white' />
-            </View>
-        )
-    }
+  return class XButton extends Component {
+      static defaultProps = {
+          type: 'default',
+          size: 'default',
+          color: 'default',
+          opacity: 1,
+          activeOpacity: 0.8,
+      };
 
-    render() {
-        const {
-            type,
-            size,
-            color,
-            isLoading,
-            isDisabled,
-            hasChildren,
-            opacity,
-            activeOpacity,
-        } = this.props;
+      renderLoadingIndicator() {
+          return (
+              <View style={ Styles.loadingStateButtonIndicator }>
+                  <ActivityIndicator
+                      color='white' />
+              </View>
+          )
+      }
 
-        const style = StyleSheet.flatten([
-            !hasChildren && Styles[`${ type }TypeButton`],
-            Styles[`${ size }SizeButton`],
-            Styles[`${ color }ColorButton`],
-            isLoading && Styles.loadingStateButton,
-            isDisabled && Styles.disabledStateButton,
-            this.props.style || {},
-        ]);
+      render() {
+          const {
+              type,
+              size,
+              color,
+              isLoading,
+              isDisabled,
+              hasChildren,
+              opacity,
+              activeOpacity,
+          } = this.props;
 
-        const textColor = ['default', 'transparent'].indexOf(color) > -1 ? null : 'white';
+          const style = StyleSheet.flatten([
+              !hasChildren && Styles[`${ type }TypeButton`],
+              Styles[`${ size }SizeButton`],
+              Styles[`${ color }ColorButton`],
+              isLoading && Styles.loadingStateButton,
+              isDisabled && Styles.disabledStateButton,
+              this.props.style || {},
+          ]);
 
-        return (
-            <TouchableOpacity
-                disabled={ this.props.isDisabled }
-                onPress={ this.props.onPress }
-                activeOpacity={ activeOpacity }
-                style={ { opacity } }>
-                <View style={ style }>
-                    { this.props.isLoading ? this.renderLoadingIndicator() : null }
-                    { hasChildren ? (
-                        this.props.children
-                    ) : (
-                        <XText
-                            color={ textColor }
-                            size={ size }
-                            weight='semibold'>
-                            { this.props.children }
-                        </XText>
-                    )}
-                </View>
-            </TouchableOpacity>
-        )
-    }
+          const textColor = ['default', 'transparent'].indexOf(color) > -1 ? null : 'white';
 
+          return (
+              <TouchableOpacity
+                  disabled={ this.props.isDisabled }
+                  onPress={ this.props.onPress }
+                  activeOpacity={ activeOpacity }
+                  style={ { opacity } }>
+                  <View style={ style }>
+                      { this.props.isLoading ? this.renderLoadingIndicator() : null }
+                      { hasChildren ? (
+                          this.props.children
+                      ) : (
+                          <XText
+                              color={ textColor }
+                              size={ size }
+                              weight='semibold'>
+                              { this.props.children }
+                          </XText>
+                      )}
+                  </View>
+              </TouchableOpacity>
+          )
+      }
+
+  }
 }
-
-XButton.defaultProps = {
-    type: 'default',
-    size: 'default',
-    color: 'default',
-    opacity: 1,
-    activeOpacity: 0.8,
-}
-
-export default XButton;
