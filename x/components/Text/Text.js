@@ -3,36 +3,39 @@ import { StyleSheet, Text } from 'react-native';
 
 import TextStyles from './TextStyles';
 
-class XText extends Component {
-    render() {
-        const {
-            color,
-            size,
-            type,
-            weight,
-        } = this.props;
+export default (theme) => {
+    let Styles = TextStyles(theme);
 
-        const style = StyleSheet.flatten([
-            TextStyles[`${ type }TypeText`],
-            TextStyles[`${ color }ColorText`],
-            TextStyles[`${ size }SizeText`],
-            TextStyles[`${ weight }WeightText`],
-            this.props.style || {},
-        ])
+    return class XText extends Component {
+        static defaultProps = {
+            type: 'default',
+            color: 'default',
+            size: 'default',
+            weight: 'regular',
+        };
 
-        return (
-            <Text { ...this.props } style={ style }>
-                { this.props.children }
-            </Text>
-        )
+        render() {
+            const {
+                color,
+                size,
+                type,
+                weight,
+            } = this.props;
+
+            const style = StyleSheet.flatten([
+                Styles[`${ type }TypeText`],
+                Styles[`${ color }ColorText`],
+                Styles[`${ size }SizeText`],
+                Styles[`${ weight }WeightText`],
+                this.props.style || {},
+            ])
+
+            return (
+                <Text { ...this.props } style={ style }>
+                    { this.props.children }
+                </Text>
+            )
+        }
     }
-}
 
-XText.defaultProps = {
-    type: 'default',
-    color: 'default',
-    size: 'default',
-    weight: 'regular',
 }
-
-export default XText;
