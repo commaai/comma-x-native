@@ -4,7 +4,12 @@
   "description": "X UI Toolkit for React Native",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns":["__snapshots__", "<rootDir>/node_modules"]
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,14 @@
     "react-native-linear-gradient": "^2.3.0"
   },
   "devDependencies": {
-    "lodash": "^4.17.4"
+    "babel-core": "^6.26.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.2.2",
+    "jest": "^21.2.1",
+    "lodash": "^4.17.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.1.1",
+    "react-native": "^0.50.3"
   }
 }
