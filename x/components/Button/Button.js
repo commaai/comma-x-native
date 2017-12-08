@@ -37,11 +37,11 @@ export default (theme) => {
               color,
               isLoading,
               isDisabled,
-              hasChildren,
               opacity,
               activeOpacity,
           } = this.props;
 
+          const hasChildren = !(typeof this.props.children === 'string');
           const style = StyleSheet.flatten([
               !hasChildren && Styles[`${ type }TypeButton`],
               Styles[`${ size }SizeButton`],
