@@ -27,7 +27,6 @@ export const BaseTheme = {
         defaults: {
             borderWidth: 2,
             radius: 100,
-            padding: '15%',
         },
         sizes: {
             tiny: 42,
