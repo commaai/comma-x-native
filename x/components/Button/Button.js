@@ -17,6 +17,7 @@ export default (theme) => {
           type: 'default',
           size: 'default',
           color: 'default',
+          textColor: 'default',
           opacity: 1,
           activeOpacity: 0.8,
       };
@@ -35,6 +36,7 @@ export default (theme) => {
               type,
               size,
               color,
+              textColor,
               isLoading,
               isDisabled,
               opacity,
@@ -51,7 +53,7 @@ export default (theme) => {
               this.props.style || {},
           ]);
 
-          const textColor = ['default', 'transparent'].indexOf(color) > -1 ? null : 'white';
+          const _textColor = ['default', 'transparent'].indexOf(color) > -1 ? textColor : 'white';
 
           return (
               <TouchableOpacity
@@ -65,7 +67,7 @@ export default (theme) => {
                           this.props.children
                       ) : (
                           <XText
-                              color={ textColor }
+                              color={ _textColor }
                               size={ size }
                               weight='semibold'>
                               { this.props.children }
