@@ -68,5 +68,25 @@ export const BaseTheme = {
                 borderColor: Colors.green200,
             },
         },
-    }
+    },
+    line: {
+        defaults: {
+            marginTop: 10,
+            marginBottom: 10,
+        },
+        sizes: {
+            tiny: 0.5,
+            small: 1,
+            default: 2,
+            medium: 5,
+            big: 8,
+            jumbo: 13,
+        },
+        colors: {
+            default: Colors.lightGrey200,
+            lightGrey: Colors.lightGrey500,
+            darkGrey: Colors.grey900,
+            white: Colors.white,
+        },
+    },
 }

@@ -5,7 +5,7 @@
 
     UI library for react-native
 
-    :copyright: (c) 2017, comma.ai
+    :copyright: (c) 2018, comma.ai
     :license: See LICENSE for more details
     :source: https://github.com/commaai/comma-x-native
 
@@ -17,12 +17,14 @@ import Button from './x/components/Button';
 import Gradient from './x/components/Gradient';
 import Image from './x/components/Image';
 import Text from './x/components/Text';
+import Line from './x/components/Line';
 
 export default function X(THEME) {
     const theme = _.merge(BaseTheme, THEME);
     return {
         Button: Button(theme),
         Text: Text(theme),
+        Line: Line(theme),
         Gradient,
         Image,
     }
