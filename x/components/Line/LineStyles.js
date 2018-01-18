@@ -3,8 +3,6 @@ import { StyleSheet } from 'react-native';
 export default (theme) => {
     let LineStyles = {
         defaultTypeLine: {
-            marginTop: theme.line.defaults.marginTop,
-            marginBottom: theme.line.defaults.marginBottom,
             width: '100%',
         },
     };
@@ -13,6 +11,14 @@ export default (theme) => {
     Object.keys(theme.line.sizes).map((size) => {
         LineStyles[`${ size }SizeLine`] = {
             height: theme.line.sizes[size],
+        }
+    })
+
+    // Assign Line Spacing
+    Object.keys(theme.line.spacing).map((spacing) => {
+        LineStyles[`${ spacing }SpacingLine`] = {
+            marginTop: theme.line.spacing[spacing],
+            marginBottom: theme.line.spacing[spacing],
         }
     })
 

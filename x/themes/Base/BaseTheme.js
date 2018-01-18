@@ -53,7 +53,6 @@ export const BaseTheme = {
             inverted: {
                 backgroundColor: Colors.transparent,
                 borderColor: Colors.white30,
-                borderWidth: 1,
             },
             blue: {
                 backgroundColor: Colors.blue50,
@@ -70,10 +69,6 @@ export const BaseTheme = {
         },
     },
     line: {
-        defaults: {
-            marginTop: 10,
-            marginBottom: 10,
-        },
         sizes: {
             tiny: 0.5,
             small: 1,
@@ -81,6 +76,15 @@ export const BaseTheme = {
             medium: 5,
             big: 8,
             jumbo: 13,
+        },
+        spacing: {
+            none: 0,
+            tiny: 10,
+            small: 15,
+            default: 20,
+            medium: 30,
+            big: 40,
+            jumbo: 60,
         },
         colors: {
             default: Colors.lightGrey200,

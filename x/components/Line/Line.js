@@ -11,6 +11,7 @@ export default (theme) => {
             type: 'default',
             color: 'default',
             size: 'default',
+            spacing: 'default',
         };
 
         render() {
@@ -18,12 +19,14 @@ export default (theme) => {
                 type,
                 color,
                 size,
+                spacing,
             } = this.props;
 
             const style = StyleSheet.flatten([
                 Styles[`${ type }TypeLine`],
                 Styles[`${ color }ColorLine`],
                 Styles[`${ size }SizeLine`],
+                Styles[`${ spacing }SpacingLine`],
                 this.props.style || {},
             ])
 
