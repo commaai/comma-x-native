@@ -18,6 +18,7 @@ import Gradient from './x/components/Gradient';
 import Image from './x/components/Image';
 import Text from './x/components/Text';
 import Line from './x/components/Line';
+import Avatar from './x/components/Avatar';
 
 export default function X(THEME) {
     const theme = _.merge(BaseTheme, THEME);
@@ -25,6 +26,7 @@ export default function X(THEME) {
         Button: Button(theme),
         Text: Text(theme),
         Line: Line(theme),
+        Avatar: Avatar(theme),
         Gradient,
         Image,
     }

@@ -93,4 +93,20 @@ export const BaseTheme = {
             white: Colors.white,
         },
     },
+    avatar: {
+        defaults: {
+            backgroundColor: Colors.lightGrey200,
+            borderColor: 'transparent',
+            borderRadius: 5,
+            borderWidth: 1,
+        },
+        sizes: {
+            tiny: 30,
+            small: 40,
+            default: 60,
+            medium: 80,
+            big: 100,
+            jumbo: 150,
+        },
+    }
 }
