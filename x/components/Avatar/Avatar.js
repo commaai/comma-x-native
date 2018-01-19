@@ -10,11 +10,14 @@ export default (theme) => {
         static defaultProps = {
             type: 'default',
             shape: 'square',
+            color: 'default',
             size: 'default',
             image: null,
             imageStyle: null,
             imageIsFlex: true,
+            imageRadius: null,
             imageResizeMode: 'contain',
+            imageTintColor: null,
         };
 
         render() {
@@ -22,14 +25,18 @@ export default (theme) => {
                 type,
                 shape,
                 size,
+                color,
                 image,
                 imageIsFlex,
                 imageResizeMode,
+                imageRadius,
+                imageTintColor,
             } = this.props;
 
             const style = [
                 Styles[`${ type }TypeAvatar`],
                 Styles[`${ size }SizeAvatar`],
+                Styles[`${ color }ColorAvatar`],
                 shape === 'circle' && { borderRadius: theme.avatar.sizes[size]/2 },
                 this.props.style || {},
             ]
@@ -37,6 +44,8 @@ export default (theme) => {
             const imageStyle = [
                 shape === 'square' && { borderRadius: theme.avatar.defaults.borderRadius },
                 shape === 'circle' && { borderRadius: theme.avatar.sizes[size]/2 },
+                imageRadius !== null && { borderRadius: imageRadius },
+                imageTintColor && { tintColor: imageTintColor },
                 this.props.imageStyle || {},
             ]
 
@@ -46,8 +55,8 @@ export default (theme) => {
                         source={ image }
                         isFlex={ imageIsFlex }
                         resizeMode={ imageResizeMode }
-                        style={ imageStyle }
-                        height={ theme.avatar.sizes[size] } />
+                        height={ theme.avatar.sizes[size] }
+                        style={ imageStyle } />
                 </View>
             )
         }

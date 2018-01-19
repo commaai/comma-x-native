@@ -18,5 +18,12 @@ export default (theme) => {
         }
     })
 
+    // Assign Avatar Colors
+    Object.keys(theme.avatar.colors).map((color) => {
+        AvatarStyles[`${ color }ColorAvatar`] = {
+            backgroundColor: theme.avatar.colors[color],
+        }
+    })
+
     return StyleSheet.create(AvatarStyles);
 }

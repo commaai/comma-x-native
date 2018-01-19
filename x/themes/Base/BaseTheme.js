@@ -108,5 +108,9 @@ export const BaseTheme = {
             big: 100,
             jumbo: 150,
         },
+        colors: {
+            default: Colors.lightGrey200,
+            white: Colors.white,
+        },
     }
 }
