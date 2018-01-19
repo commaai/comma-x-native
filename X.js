@@ -23,6 +23,7 @@ import Avatar from './x/components/Avatar';
 export default function X(THEME) {
     const theme = _.merge(BaseTheme, THEME);
     return {
+        theme: theme,
         Button: Button(theme),
         Text: Text(theme),
         Line: Line(theme),

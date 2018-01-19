@@ -1,6 +1,7 @@
 import { Colors } from './BaseColors';
 
 export const BaseTheme = {
+    colors: { ...Colors },
     text: {
         sizes: {
             tiny: 12,
