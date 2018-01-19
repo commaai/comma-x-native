@@ -44,14 +44,14 @@ export default (theme) => {
           } = this.props;
 
           const hasChildren = !(typeof this.props.children === 'string');
-          const style = StyleSheet.flatten([
+          const style = [
               !hasChildren && Styles[`${ type }TypeButton`],
               Styles[`${ size }SizeButton`],
               Styles[`${ color }ColorButton`],
               isLoading && Styles.loadingStateButton,
               isDisabled && Styles.disabledStateButton,
               this.props.style || {},
-          ]);
+          ];
 
           const _textColor = ['default', 'transparent'].indexOf(color) > -1 ? textColor : 'white';
 

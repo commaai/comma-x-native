@@ -22,13 +22,13 @@ export default (theme) => {
                 weight,
             } = this.props;
 
-            const style = StyleSheet.flatten([
+            const style = [
                 Styles[`${ type }TypeText`],
                 Styles[`${ color }ColorText`],
                 Styles[`${ size }SizeText`],
                 Styles[`${ weight }WeightText`],
                 this.props.style || {},
-            ])
+            ];
 
             return (
                 <Text { ...this.props } style={ style }>

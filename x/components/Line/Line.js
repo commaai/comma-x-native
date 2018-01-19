@@ -22,13 +22,13 @@ export default (theme) => {
                 spacing,
             } = this.props;
 
-            const style = StyleSheet.flatten([
+            const style = [
                 Styles[`${ type }TypeLine`],
                 Styles[`${ color }ColorLine`],
                 Styles[`${ size }SizeLine`],
                 Styles[`${ spacing }SpacingLine`],
                 this.props.style || {},
-            ])
+            ];
 
             return (
                 <View { ...this.props } style={ style } />
