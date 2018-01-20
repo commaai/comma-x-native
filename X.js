@@ -19,6 +19,7 @@ import Image from './x/components/Image';
 import Text from './x/components/Text';
 import Line from './x/components/Line';
 import Avatar from './x/components/Avatar';
+import StatusBar from './x/components/StatusBar';
 
 export default function X(THEME) {
     const theme = _.merge(BaseTheme, THEME);
@@ -28,6 +29,7 @@ export default function X(THEME) {
         Text: Text(theme),
         Line: Line(theme),
         Avatar: Avatar(theme),
+        StatusBar: StatusBar(theme),
         Gradient,
         Image,
     }

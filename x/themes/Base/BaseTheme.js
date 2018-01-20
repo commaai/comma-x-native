@@ -113,5 +113,12 @@ export const BaseTheme = {
             default: Colors.lightGrey200,
             white: Colors.white,
         },
-    }
+    },
+    statusBar: {
+        types: {
+            absolute: {
+                zIndex: 100,
+            },
+        },
+    },
 }
