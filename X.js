@@ -30,7 +30,7 @@ export default function X(THEME) {
         Line: Line(theme),
         Avatar: Avatar(theme),
         StatusBar: StatusBar(theme),
-        Gradient,
+        Gradient: Gradient(theme),
         Image,
     }
 }

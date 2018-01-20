@@ -121,4 +121,24 @@ export const BaseTheme = {
             },
         },
     },
+    gradient: {
+        colors: {
+            light_grey: [
+                'rgb(245, 246, 246)',
+                'rgb(236, 237, 237)'
+            ],
+            dark_blue: [
+                'rgb(7, 35, 57)',
+                'rgb(5, 26, 43)'
+            ],
+            blue: [
+                'rgb(12,52,82)',
+                'rgb(9,38,60)'
+            ],
+            transparent_white: [
+                'white',
+                'transparent'
+            ],
+        },
+    },
 }

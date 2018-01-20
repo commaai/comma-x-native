@@ -1,8 +1,12 @@
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
-    gradient: {
-        height: '100%',
-        width: '100%',
-    }
-})
+export default (theme) => {
+    let GradientStyles = {
+        defaultTypeGradient: {
+            height: '100%',
+            width: '100%',
+        },
+    };
+
+    return StyleSheet.create(GradientStyles);
+}
