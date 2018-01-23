@@ -26,7 +26,7 @@ export default (theme) => {
             return (
                 <LinearGradient
                     { ...this.props }
-                    colors={ (color !== null) ? theme.gradient.colors[color] : colors }
+                    colors={ (color != null) ? theme.gradient.colors[color] : colors }
                     style={ style }>
                     { this.props.children }
                 </LinearGradient>
