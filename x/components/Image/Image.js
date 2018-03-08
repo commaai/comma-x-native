@@ -14,9 +14,7 @@ export default class XIMage extends Component {
         ];
 
         return (
-            <Image { ...this.props } style={ style }>
-                { this.props.children }
-            </Image>
+            <Image { ...this.props } style={ style } />
         )
     }
 }
