@@ -141,4 +141,28 @@ export const BaseTheme = {
             ],
         },
     },
+    checkboxField: {
+        sizes: {
+            small: 26,
+            smallLabel: 17,
+            default: 32,
+            defaultLabel: 18,
+        },
+        colors: {
+            white: {
+                input: Colors.white20,
+                inputBorder: Colors.white10,
+                inputChecked: 'rgba(0,0,0,.2)',
+                inputCheckedIcon: Colors.white50,
+                label: Colors.white,
+            },
+            default: {
+                input: Colors.desatBlue800,
+                inputBorder: Colors.white50,
+                inputChecked: Colors.white20,
+                inputCheckedIcon: Colors.blue800,
+                label: Colors.desatBlue800,
+            },
+        },
+    },
 }

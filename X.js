@@ -21,6 +21,7 @@ import Line from './x/components/Line';
 import Avatar from './x/components/Avatar';
 import StatusBar from './x/components/StatusBar';
 import Entrance from './x/components/Entrance';
+import CheckboxField from './x/components/CheckboxField';
 
 export default function X(THEME) {
     const theme = _.merge(BaseTheme, THEME);
@@ -33,6 +34,7 @@ export default function X(THEME) {
         StatusBar: StatusBar(theme),
         Gradient: Gradient(theme),
         Entrance: Entrance(theme),
+        CheckboxField: CheckboxField(theme),
         Image,
     }
 }
