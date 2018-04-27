@@ -39,6 +39,11 @@ export const BaseTheme = {
             full: '100%',
         },
         colors: {
+            ghost: {
+                backgroundColor: Colors.transparent,
+                borderColor: Colors.transparent,
+                alignSelf: 'flex-start',
+            },
             default: {
                 backgroundColor: Colors.lightGrey500,
                 borderColor: Colors.lightGrey400,
@@ -147,6 +152,30 @@ export const BaseTheme = {
             smallLabel: 17,
             default: 32,
             defaultLabel: 18,
+        },
+        colors: {
+            white: {
+                input: Colors.white20,
+                inputBorder: Colors.white10,
+                inputChecked: 'rgba(0,0,0,.2)',
+                inputCheckedIcon: Colors.white50,
+                label: Colors.white,
+            },
+            default: {
+                input: Colors.desatBlue800,
+                inputBorder: Colors.white50,
+                inputChecked: Colors.white20,
+                inputCheckedIcon: Colors.blue800,
+                label: Colors.desatBlue800,
+            },
+        },
+    },
+    radioField: {
+        sizes: {
+            default: 32,
+            defaultLabel: 18,
+            big: 45,
+            bigLabel: 18,
         },
         colors: {
             white: {

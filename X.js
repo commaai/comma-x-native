@@ -22,6 +22,7 @@ import Avatar from './x/components/Avatar';
 import StatusBar from './x/components/StatusBar';
 import Entrance from './x/components/Entrance';
 import CheckboxField from './x/components/CheckboxField';
+import RadioField from './x/components/RadioField';
 
 export default function X(THEME) {
     const theme = _.merge(BaseTheme, THEME);
@@ -35,6 +36,7 @@ export default function X(THEME) {
         Gradient: Gradient(theme),
         Entrance: Entrance(theme),
         CheckboxField: CheckboxField(theme),
+        RadioField: RadioField(theme),
         Image,
     }
 }

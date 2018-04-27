@@ -18,6 +18,7 @@ export default (theme) => {
           size: 'default',
           color: 'default',
           textColor: 'default',
+          textWeight: 'semibold',
           opacity: 1,
           activeOpacity: 0.8,
       };
@@ -37,6 +38,7 @@ export default (theme) => {
               size,
               color,
               textColor,
+              textWeight,
               isLoading,
               isDisabled,
               opacity,
@@ -69,7 +71,7 @@ export default (theme) => {
                           <XText
                               color={ _textColor }
                               size={ size }
-                              weight='semibold'>
+                              weight={ textWeight }>
                               { this.props.children }
                           </XText>
                       )}
