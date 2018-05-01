@@ -21,17 +21,26 @@ export default (theme) => {
           label: 'Radio Label',
           opacity: 1,
           activeOpacity: 0.8,
+          isDisabled: false,
           isChecked: false,
           hasAppend: false,
           checkIcon: require('../../assets/icon_checkmark.png'),
           appendIcon: require('../../assets/icon_chevron_right.png'),
       };
 
+      handlePress() {
+          const { isDisabled } = this.props;
+          if (!isDisabled) {
+              return this.props.onPress()
+          }
+      }
+
       render() {
           const {
               type,
               size,
               color,
+              isDisabled,
               isChecked,
               hasAppend,
           } = this.props;
@@ -40,6 +49,7 @@ export default (theme) => {
               Styles[`${ type }TypeRadioField`],
               Styles[`${ size }SizeRadioField`],
               Styles[`${ color }ColorRadioField`],
+              isDisabled && Styles[`${ type }TypeRadioFieldDisabled`],
               this.props.style || {},
           ];
 
@@ -70,7 +80,7 @@ export default (theme) => {
 
           return (
               <TouchableOpacity
-                  onPress={ this.props.onPress }
+                  onPress={ () => this.handlePress() }
                   activeOpacity={ this.props.activeOpacity }
                   style={ { opacity: this.props.opacity } }>
                   <View style={ fieldStyle }>

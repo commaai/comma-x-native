@@ -6,6 +6,9 @@ export default (theme) => {
             alignItems: 'center',
             flexDirection: 'row',
         },
+        defaultTypeRadioFieldDisabled: {
+            opacity: 0.2,
+        },
         defaultTypeRadioFieldInput: {
             borderWidth: 1,
             padding: '3%',
