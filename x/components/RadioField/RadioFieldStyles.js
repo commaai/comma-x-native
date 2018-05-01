@@ -7,26 +7,26 @@ export default (theme) => {
             flexDirection: 'row',
         },
         defaultTypeRadioFieldDisabled: {
-            opacity: 0.2,
+            opacity: theme.radioField.defaults.opacityDisabled,
         },
         defaultTypeRadioFieldInput: {
-            borderWidth: 1,
-            padding: '3%',
+            borderWidth: theme.radioField.defaults.inputBorderWidth,
+            padding: theme.radioField.defaults.inputPadding,
         },
         defaultTypeRadioFieldInputChecked: {
-            borderWidth: 3,
+            borderWidth: theme.radioField.defaults.inputBorderWidthChecked,
         },
         defaultTypeRadioFieldCheckIcon: {
-            opacity: 0.8,
+            opacity: theme.radioField.defaults.checkIconOpacity,
         },
         defaultTypeRadioFieldLabel: {
-            paddingLeft: '5%',
+            paddingLeft: theme.radioField.defaults.labelPaddingLeft,
         },
         defaultTypeRadioFieldAppend: {
-            opacity: 0.3,
+            opacity: theme.radioField.defaults.appendOpacity,
         },
         defaultTypeRadioFieldAppendChecked: {
-            opacity: 0.1,
+            opacity: theme.radioField.defaults.appendOpacityChecked,
         },
     };
 

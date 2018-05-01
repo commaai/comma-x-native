@@ -171,6 +171,16 @@ export const BaseTheme = {
         },
     },
     radioField: {
+        defaults: {
+            opacityDisabled: 0.2,
+            inputPadding: '3%',
+            inputBorderWidth: 1,
+            inputBorderWidthChecked: 3,
+            checkIconOpacity: 0.8,
+            labelPaddingLeft: '5%',
+            appendOpacity: 0.3,
+            appendOpacityChecked: 0.1,
+        },
         sizes: {
             default: 32,
             defaultLabel: 18,
