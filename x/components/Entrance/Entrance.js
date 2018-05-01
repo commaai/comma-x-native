@@ -54,6 +54,16 @@ export default (theme) => {
                             }),
                         }],
                     };
+                case 'fadeInLeft':
+                    return {
+                        opacity: transitionProgress,
+                        transform: [{
+                            translateX: transitionProgress.interpolate({
+                                inputRange: [-1, 0.6, 1],
+                                outputRange: [8, -1, 0]
+                            }),
+                        }],
+                    };
                 default:
                     return {};
             }
