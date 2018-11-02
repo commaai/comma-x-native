@@ -204,4 +204,57 @@ export const BaseTheme = {
             },
         },
     },
+    table: {
+        sizes: {
+            default: 'auto',
+        },
+        spacing: {
+            none: 0,
+            default: 10,
+            big: 20,
+        },
+        margins: {
+            none: 0,
+            default: 10,
+        },
+        colors: {
+            default: Colors.transparent,
+            darkBlue: '#0F2537',
+        },
+        directions: {
+            default: 'column',
+            row: 'row',
+        },
+    },
+    tableCell: {
+        sizes: {
+            default: 66,
+        },
+        spacing: {
+            default: 20,
+        },
+        colors: {
+            default: Colors.transparent,
+            white: Colors.white,
+        },
+        states: {
+            isExpanded: {
+                height: 'auto',
+            }
+        },
+        types: {
+            switch: {
+                paddingTop: 20,
+                paddingBottom: 20,
+                transform: [
+                    { scaleX: 1.8 },
+                    { scaleY: 1.8 }
+                ],
+            },
+            detail: {
+                paddingTop: 20,
+                paddingBottom: 20,
+            },
+        },
+    },
 }
