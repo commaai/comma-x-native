@@ -213,9 +213,10 @@ export const BaseTheme = {
             default: 10,
             big: 20,
         },
-        margins: {
+        padding: {
             none: 0,
             default: 10,
+            big: 20,
         },
         colors: {
             default: Colors.transparent,

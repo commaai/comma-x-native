@@ -14,6 +14,7 @@ export default (theme) => {
             type: 'default',
             color: 'default',
             size: 'default',
+            padding: 'default',
             spacing: 'default',
             direction: 'column',
         };
@@ -24,6 +25,7 @@ export default (theme) => {
                 color,
                 size,
                 spacing,
+                padding,
                 value,
                 direction,
             } = this.props;
@@ -33,6 +35,7 @@ export default (theme) => {
                 Styles[`${ color }ColorTable`],
                 Styles[`${ size }SizeTable`],
                 Styles[`${ spacing }SpacingTable`],
+                Styles[`${ padding }PaddingTable`],
                 Styles[`${ direction }DirectionTable`],
                 this.props.style || {},
             ];

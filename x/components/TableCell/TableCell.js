@@ -25,6 +25,8 @@ export default (theme) => {
             isExpanded: false,
             handleExpanded: null,
             handleChanged: null,
+            titleTextSize: 'small',
+            valueTextSize: 'small',
         };
 
         render() {
@@ -41,7 +43,12 @@ export default (theme) => {
                 isExpanded,
                 handleExpanded,
                 handleChanged,
+                titleTextSize,
+                valueTextSize,
             } = this.props;
+
+            const titleTextColor = 'white';
+            const valueTextColor = 'white';
 
             const tableCellStyle = [
                 Styles[`${ type }TypeTableCell`],
@@ -88,8 +95,8 @@ export default (theme) => {
                                     style={ tableCellIconStyle } />
                             ) : null }
                             <XText
-                                color='white'
-                                size='small'
+                                color={ titleTextColor }
+                                size={ titleTextSize }
                                 style={ tableCellTitleStyle }
                                 weight='semibold'>
                                 { title }
@@ -97,8 +104,8 @@ export default (theme) => {
                             <View style={ tableCellTypeStyle }>
                                 { type == 'default' ? (
                                     <XText
-                                        color='white'
-                                        size='small'>
+                                        color={ valueTextColor }
+                                        size={ valueTextSize }>
                                         { value }
                                     </XText>
                                 ) : null }
@@ -115,7 +122,9 @@ export default (theme) => {
                     </TouchableWithoutFeedback>
                     { description == null ? null :
                         <View style={ tableCellDrawerStyle }>
-                            <XText color='white' size='tiny'>
+                            <XText
+                                color='white'
+                                size='tiny'>
                                 { description }
                             </XText>
                         </View>

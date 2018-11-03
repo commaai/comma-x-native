@@ -21,15 +21,14 @@ export default (theme) => {
     // Assign Table Spacing
     Object.keys(theme.table.spacing).map((spacing) => {
         TableStyles[`${ spacing }SpacingTable`] = {
-            padding: theme.table.spacing[spacing],
+            marginBottom: theme.table.spacing[spacing],
         }
     })
 
-    // Assign Table Margins
-    Object.keys(theme.table.margins).map((margin) => {
-        TableStyles[`${ margin }MarginTable`] = {
-            marginTop: theme.table.margins[margin],
-            marginBottom: theme.table.margins[margin],
+    // Assign Table Padding
+    Object.keys(theme.table.padding).map((padding) => {
+        TableStyles[`${ padding }PaddingTable`] = {
+            padding: theme.table.padding[padding],
         }
     })
 
