@@ -7,13 +7,11 @@ import {
 } from 'react-native';
 import XImage from '../Image';
 import XNText from '../Text';
-import XNButton from '../Button';
 
 import TableCellStyles from './TableCellStyles';
 
 export default (theme) => {
     const XText = XNText(theme);
-    const XButton = XNButton(theme);
     let Styles = TableCellStyles(theme);
 
     return class XTableCell extends Component {
@@ -29,7 +27,6 @@ export default (theme) => {
             handleChanged: null,
             titleTextSize: 'small',
             valueTextSize: 'small',
-            buttonSize: 'tiny',
         };
 
         render() {
@@ -48,7 +45,6 @@ export default (theme) => {
                 handleChanged,
                 titleTextSize,
                 valueTextSize,
-                buttonSize,
                 children,
             } = this.props;
 
