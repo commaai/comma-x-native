@@ -35,6 +35,20 @@ export default (theme) => {
             alignItems: 'center',
             width: '20%',
         },
+        customTypeTableCellIcon: {
+            alignItems: 'flex-start',
+            height: '100%',
+            margin: 5,
+            width: '10%',
+        },
+        customTypeTableCellTitle: {
+            padding: 20,
+            width: '70%',
+        },
+        customTypeTableCellType: {
+            alignItems: 'center',
+            width: '20%',
+        },
         defaultTypeTableCellTitle: {
             padding: 20,
             width: '60%',
