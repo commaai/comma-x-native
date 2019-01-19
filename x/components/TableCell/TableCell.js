@@ -27,7 +27,7 @@ export default (theme) => {
             handleChanged: null,
             titleTextSize: 'small',
             valueTextSize: 'small',
-            disabled: false,
+            isDisabled: false,
         };
 
         render() {
@@ -47,7 +47,7 @@ export default (theme) => {
                 titleTextSize,
                 valueTextSize,
                 children,
-                disabled,
+                isDisabled,
             } = this.props;
 
             const titleTextColor = 'white';
@@ -84,7 +84,10 @@ export default (theme) => {
 
             const tableCellInputStyle = [
                 Styles[`${ type }TypeTableCellInput`],
+                isDisabled ? Styles[`isDisabledStateTableCellInput`] : null,
             ];
+
+            const thumbColor = isDisabled ? 'rgba(233,233,233,0.3)' : '#ffffff';
 
             return (
                 <View { ...this.props } style={ tableCellStyle }>
@@ -114,12 +117,12 @@ export default (theme) => {
                                 ) : null }
                                 { type == 'switch' ? (
                                     <Switch
-                                        disabled={ disabled }
+                                        disabled={ isDisabled }
                                         value={ value }
                                         style={ tableCellInputStyle }
                                         onTintColor='rgba(233,233,233,0.5)'
                                         onValueChange={ handleChanged }
-                                        thumbTintColor='#ffffff' />
+                                        thumbTintColor={ thumbColor } />
                                 ) : null }
                                 { type == 'custom' ? (
                                     <View>

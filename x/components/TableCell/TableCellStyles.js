@@ -98,5 +98,14 @@ export default (theme) => {
         })
     })
 
+    // Assign TableCell Input States
+    Object.keys(theme.tableCellInput.states).map((state) => {
+        Object.keys(theme.tableCellInput.states[state]).map((stateKey) => {
+            TableCellStyles[`${ state }StateTableCellInput`] = {
+                [`${ stateKey }`]: theme.tableCellInput.states[state][stateKey],
+            }
+        })
+    })
+
     return StyleSheet.create(TableCellStyles);
 }

@@ -132,6 +132,10 @@ export const BaseTheme = {
                 'rgb(245, 246, 246)',
                 'rgb(236, 237, 237)'
             ],
+            dark_grey: [
+                'rgb(8, 8, 8)',
+                'rgb(0, 0, 0)'
+            ],
             dark_blue: [
                 'rgb(7, 35, 57)',
                 'rgb(5, 26, 43)'
@@ -257,5 +261,12 @@ export const BaseTheme = {
                 paddingBottom: 20,
             },
         },
+    },
+    tableCellInput: {
+        states: {
+            isDisabled: {
+                opacity: 1.0,
+            }
+        }
     },
 }
