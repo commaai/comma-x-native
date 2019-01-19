@@ -27,6 +27,7 @@ export default (theme) => {
             handleChanged: null,
             titleTextSize: 'small',
             valueTextSize: 'small',
+            disabled: false,
         };
 
         render() {
@@ -46,6 +47,7 @@ export default (theme) => {
                 titleTextSize,
                 valueTextSize,
                 children,
+                disabled,
             } = this.props;
 
             const titleTextColor = 'white';
@@ -112,6 +114,7 @@ export default (theme) => {
                                 ) : null }
                                 { type == 'switch' ? (
                                     <Switch
+                                        disabled={ disabled }
                                         value={ value }
                                         style={ tableCellInputStyle }
                                         onTintColor='rgba(233,233,233,0.5)'
