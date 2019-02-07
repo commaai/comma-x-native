@@ -43,6 +43,7 @@ export default (theme) => {
               isDisabled,
               opacity,
               activeOpacity,
+              isFlex,
           } = this.props;
 
           const hasChildren = !(typeof this.props.children === 'string');
@@ -62,7 +63,7 @@ export default (theme) => {
                   disabled={ this.props.isDisabled }
                   onPress={ this.props.onPress }
                   activeOpacity={ activeOpacity }
-                  style={ { opacity } }>
+                  style={ { opacity, flex: isFlex ? 1 : null, } }>
                   <View style={ style }>
                       { this.props.isLoading ? this.renderLoadingIndicator() : null }
                       { hasChildren ? (
