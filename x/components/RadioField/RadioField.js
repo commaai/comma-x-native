@@ -26,6 +26,7 @@ export default (theme) => {
           hasAppend: false,
           checkIcon: require('../../assets/icon_checkmark.png'),
           appendIcon: require('../../assets/icon_chevron_right.png'),
+          buttonStyle: {},
       };
 
       handlePress() {
@@ -43,6 +44,7 @@ export default (theme) => {
               isDisabled,
               isChecked,
               hasAppend,
+              buttonStyle,
           } = this.props;
 
           const fieldStyle = [
@@ -58,6 +60,7 @@ export default (theme) => {
               Styles[`${ size }SizeRadioFieldInput`],
               Styles[`${ color }ColorRadioFieldInput`],
               isChecked && Styles[`${ color }ColorRadioFieldInputChecked`],
+              this.props.inputStyle || {},
           ];
 
           const fieldCheckIconStyle = [
@@ -82,7 +85,7 @@ export default (theme) => {
               <TouchableOpacity
                   onPress={ () => this.handlePress() }
                   activeOpacity={ this.props.activeOpacity }
-                  style={ { opacity: this.props.opacity } }>
+                  style={ [{ opacity: this.props.opacity }, buttonStyle] }>
                   <View style={ fieldStyle }>
                       <View style={ fieldInputStyle }>
                         { isChecked ? (
@@ -91,12 +94,16 @@ export default (theme) => {
                               style={ fieldCheckIconStyle } />
                       ) : null }
                       </View>
-                      <XText
-                          color={ this.props.textColor }
-                          weight='semibold'
-                          style={ fieldLabelStyle }>
-                          { this.props.label }
-                      </XText>
+                      { this.props.children ? (
+                          this.props.children
+                      ) : (
+                          <XText
+                              color={ this.props.textColor }
+                              weight='semibold'
+                              style={ fieldLabelStyle }>
+                              { this.props.label }
+                          </XText>
+                      )}
                       { hasAppend ? (
                           <View style={ fieldAppendStyle }>
                               <XNImage source={ this.props.appendIcon }  />
