@@ -41,6 +41,7 @@ export default (theme) => {
                 value,
                 title,
                 description,
+                descriptionExtra,
                 isExpanded,
                 handleExpanded,
                 handleChanged,
@@ -141,6 +142,7 @@ export default (theme) => {
                             </XText>
                         </View>
                     }
+                    { descriptionExtra != null ? descriptionExtra : null }
                 </View>
             )
         }
