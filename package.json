@@ -1,6 +1,6 @@
 {
   "name": "comma-x-native",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "X UI Toolkit for React Native",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,10 @@
   "jest": {
     "preset": "react-native",
     "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
-    "testPathIgnorePatterns":["__snapshots__", "<rootDir>/node_modules"]
+    "testPathIgnorePatterns": [
+      "__snapshots__",
+      "<rootDir>/node_modules"
+    ]
   },
   "repository": {
     "type": "git",
