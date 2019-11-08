@@ -121,9 +121,9 @@ export default (theme) => {
                                         disabled={ isDisabled }
                                         value={ value }
                                         style={ tableCellInputStyle }
-                                        onTintColor='rgba(233,233,233,0.5)'
+                                        trackColor='rgba(233,233,233,0.5)'
                                         onValueChange={ handleChanged }
-                                        thumbTintColor={ thumbColor } />
+                                        thumbColor={ thumbColor } />
                                 ) : null }
                                 { type == 'custom' ? (
                                     <View>
@@ -133,7 +133,7 @@ export default (theme) => {
                             </View>
                         </View>
                     </TouchableWithoutFeedback>
-                    { description == null ? null :
+                    { description == null || !isExpanded ? null :
                         <View style={ tableCellDrawerStyle }>
                             <XText
                                 color='white'
@@ -142,7 +142,7 @@ export default (theme) => {
                             </XText>
                         </View>
                     }
-                    { descriptionExtra != null ? descriptionExtra : null }
+                    { descriptionExtra != null && isExpanded ? descriptionExtra : null }
                 </View>
             )
         }
