@@ -10,8 +10,10 @@ export default (theme) => {
             opacity: theme.radioField.defaults.opacityDisabled,
         },
         defaultTypeRadioFieldInput: {
+            alignItems: 'center',
             borderWidth: theme.radioField.defaults.inputBorderWidth,
-            padding: theme.radioField.defaults.inputPadding,
+            justifyContent: 'center',
+            flexDirection: 'row',
         },
         defaultTypeRadioFieldInputChecked: {
             borderWidth: theme.radioField.defaults.inputBorderWidthChecked,
@@ -40,6 +42,10 @@ export default (theme) => {
             borderRadius: (theme.radioField.sizes[size]/2),
             height: theme.radioField.sizes[size],
             width: theme.radioField.sizes[size],
+        };
+        RadioFieldStyles[`${ size }SizeRadioFieldCheckIcon`] = {
+            height: theme.radioField.sizes[size]/2,
+            width: theme.radioField.sizes[size]/2,
         };
         RadioFieldStyles[`${ size }SizeRadioFieldLabel`] = {
             fontSize: theme.radioField.sizes[`${ size }Label`],

@@ -90,6 +90,7 @@ export default (theme) => {
                       <View style={ fieldInputStyle }>
                         { isChecked ? (
                             <XNImage
+                              isFlex={ false }
                               source={ this.props.checkIcon }
                               style={ fieldCheckIconStyle } />
                       ) : null }
