@@ -65,6 +65,7 @@ export default (theme) => {
 
           const fieldCheckIconStyle = [
               Styles[`${ type }TypeRadioFieldCheckIcon`],
+              Styles[`${ size }SizeRadioFieldCheckIcon`],
               Styles[`${ color }ColorRadioFieldCheckIcon`],
           ];
 
